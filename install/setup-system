@@ -119,10 +119,6 @@ fi
 log_info "Disabling systemd-networkd-wait-online.service..."
 sudo systemctl disable systemd-networkd-wait-online.service 2>/dev/null || true
 
-# Enable ssh agent
-log_info "Enabling gcr-ssh-agent"
-systemctl --user enable --now gcr-ssh-agent.socket
-
 # Setup systemd user services
 log_info "Setting up systemd user services..."
 mkdir -p "$HOME/.config/systemd/user"
