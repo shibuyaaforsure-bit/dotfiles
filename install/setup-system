@@ -41,7 +41,6 @@ if is_installed "ufw"; then
   sudo ufw default allow outgoing
   sudo ufw allow 53317/udp comment 'LocalSend'
   sudo ufw allow 53317/tcp comment 'LocalSend'
-  sudo ufw allow 22/tcp comment 'SSH'
   sudo ufw --force enable
   sudo systemctl enable ufw
   log_success "UFW configured and enabled"
